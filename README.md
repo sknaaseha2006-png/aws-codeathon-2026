@@ -74,7 +74,7 @@ Provides space to record important discussion points, concerns, and consideratio
 
 ## 🚀 Live Demo
 
-Explore Cloudix here:
+Explore EduFamily COMPASS here:
 
 **aws-codeathon-2026.netlify.app**
 
