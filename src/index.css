@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+:root {
+  --navy-50: #eef3fb;
+  --navy-100: #d4e0f4;
+  --navy-200: #a9c1e8;
+  --navy-300: #6f97d6;
+  --navy-400: #3f6fbd;
+  --navy-500: #2a519e;
+  --navy-600: #1e3d7a;
+  --navy-700: #1a3263;
+  --navy-800: #172a52;
+  --navy-900: #14213d;
+  --navy-950: #0c1628;
+
+  --teal-50: #effcf9;
+  --teal-100: #cbf7ef;
+  --teal-200: #97ede0;
+  --teal-300: #5edcca;
+  --teal-400: #2cc4b0;
+  --teal-500: #14a896;
+  --teal-600: #0c8779;
+  --teal-700: #106c62;
+  --teal-800: #135651;
+  --teal-900: #134744;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: #f6f8fc;
+  color: #14213d;
+}
+
+.font-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5cde0;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9aa7c4;
+  background-clip: padding-box;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl bg-white border border-slate-200/70 shadow-sm;
+  }
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-md hover:border-slate-300;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl font-medium text-sm px-4 py-2.5 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-navy-600 text-white hover:bg-navy-700 focus-visible:ring-navy-400 shadow-sm hover:shadow;
+  }
+  .btn-secondary {
+    @apply btn bg-white text-navy-700 border border-slate-200 hover:bg-slate-50 hover:border-slate-300;
+  }
+  .btn-ghost {
+    @apply btn text-slate-600 hover:bg-slate-100 hover:text-navy-700;
+  }
+  .btn-accent {
+    @apply btn bg-teal-500 text-white hover:bg-teal-600 focus-visible:ring-teal-400 shadow-sm hover:shadow;
+  }
+  .btn-danger {
+    @apply btn bg-rose-50 text-rose-600 border border-rose-200 hover:bg-rose-100;
+  }
+  .input {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-navy-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-navy-400/40 focus:border-navy-400 transition-all;
+  }
+  .label {
+    @apply block text-sm font-medium text-navy-800 mb-1.5;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium;
+  }
+  .section-title {
+    @apply font-display text-2xl font-bold text-navy-900 tracking-tight;
+  }
+  .section-subtitle {
+    @apply text-sm text-slate-500 mt-1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out both;
+  }
+  .animate-slide-up {
+    animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out both;
+  }
+  .bg-grid {
+    background-image: radial-gradient(circle at 1px 1px, rgba(20, 33, 61, 0.06) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+  .bg-gradient-navy {
+    background: linear-gradient(135deg, #172a52 0%, #1e3d7a 50%, #2a519e 100%);
+  }
+  .bg-gradient-hero {
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(44, 196, 176, 0.18), transparent 60%),
+      radial-gradient(900px 500px at -10% 20%, rgba(62, 111, 189, 0.22), transparent 55%),
+      linear-gradient(160deg, #0c1628 0%, #14213d 50%, #1a3263 100%);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
