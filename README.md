@@ -1,6 +1,6 @@
 # EduFamily COMPASS – Student Career Planning & Family Decision Support
 
-🌐 **Live Website:** aws-codeathon-2026.netlify.app
+🌐 **Live Website:** https://aws-codeathon-2026.netlify.app/
 
 👥 **Team Name:** Cloudix
 
@@ -76,7 +76,7 @@ Provides space to record important discussion points, concerns, and consideratio
 
 Explore EduFamily COMPASS here:
 
-**aws-codeathon-2026.netlify.app**
+**https://aws-codeathon-2026.netlify.app/**
 
 ## 👥 Team Cloudix
 
